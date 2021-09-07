@@ -26,10 +26,6 @@
       "description": "The command word you'd like the bot to respond to for posting token information, pick a simple word that represents the collection.  Default: token",
       "required": false
     },
-    "OPEN_SEA_API_KEY": {
-      "description": "Contact OpenSea to request an API key at https://docs.opensea.io/reference#request-an-api-key. The bot will work without it, but heavy use may result in being blocked.",
-      "required": false
-    },
     "OPEN_SEA_COLLECTION_NAME": {
       "description": "The collection slug name on OpenSea, get this from the browser when you are viewing a collection.",
       "required": true

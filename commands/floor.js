@@ -9,10 +9,7 @@ const cache = new CacheService(ttl);
 const fetchTokenId = async () => {
   let url = `https://api.opensea.io/api/v1/assets?order_direction=desc&offset=0&limit=1&collection=${process.env.OPEN_SEA_COLLECTION_NAME}`;
   let settings = { 
-    method: "GET",
-    headers: {
-      "X-API-KEY": process.env.OPEN_SEA_API_KEY
-    }
+    method: "GET"
   };
 
   let res = await fetch(url, settings);
@@ -35,10 +32,7 @@ const fetchFloor = async () => {
 
   let url = `${openseaAssetUrl}/${process.env.CONTRACT_ADDRESS}/${tokenId}`;
   let settings = { 
-    method: "GET",
-    headers: {
-      "X-API-KEY": process.env.OPEN_SEA_API_KEY
-    }
+    method: "GET"
   };
 
   let res = await fetch(url, settings);

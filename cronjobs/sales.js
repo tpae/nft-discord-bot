@@ -8,7 +8,7 @@ var lastTimestamp = null;
 module.exports = {
   name: 'sales',
   description: 'sales bot!',
-  interval: 30000,
+  interval: 300000,
   async execute(client) {
     if (lastTimestamp == null) {
       lastTimestamp = Math.floor(Date.now()/1000) - 120;
@@ -22,10 +22,7 @@ module.exports = {
 
     let offset = 0;
     let settings = { 
-      method: "GET",
-      headers: {
-        "X-API-KEY": process.env.OPEN_SEA_API_KEY
-      }
+      method: "GET"
     };
     while(1)
     {
