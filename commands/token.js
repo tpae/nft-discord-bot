@@ -13,8 +13,9 @@ module.exports = {
     if (isNaN(parseInt(args[0]))) {
       return message.channel.send(`Token id must be a number!`);
     }
+    const tokenId = parseInt(args[0]) + 1;
 
-    let url = `${openseaAssetUrl}/${process.env.CONTRACT_ADDRESS}/${args[0] + 1}`;
+    let url = `${openseaAssetUrl}/${process.env.CONTRACT_ADDRESS}/${tokenId}`;
     let settings = { 
       method: "GET"
     };
