@@ -14,7 +14,7 @@ module.exports = {
       return message.channel.send(`Token id must be a number!`);
     }
 
-    let url = `${openseaAssetUrl}/${process.env.CONTRACT_ADDRESS}/${args[0]}`;
+    let url = `${openseaAssetUrl}/${process.env.CONTRACT_ADDRESS}/${args[0] + 1}`;
     let settings = { 
       method: "GET"
     };
